@@ -1,13 +1,17 @@
-Getting Started with the Creative Cloud Extension SDK
+Getting Started with Common Extensibility Platform (CEP)
 ==============
 
-This page provides resources you need to get started creating extensions for Adobe Creative Cloud applications, using the new HTML5/JavaScript interface model. The Flash/ActionScript interface model for extensions is deprecated in the Creative Cloud release; support has already been removed in Adobe Photoshop CC2014, Adobe Flash CC2015 and Adobe Dreamweaver CC2015.
+This page provides the resources you need to get started in order to create extensions for Adobe Creative Cloud applications, using the new HTML5/JavaScript interface model. The Flash/ActionScript interface model for extensions is deprecated in Creative Cloud releases; Support has already been removed from CC2014 and later releases.
 
-* In the Creative Cloud 2015.x release in June 2016, Photoshop and Illustrator use CEP 7 while other applications still use CEP 6.1. Extensions and add-ins must be built on at least CEP 6 infrastructure.
+* Creative Cloud 2019 products include CEP 9 for developing extensions and add-ons. Refer to the [table](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_9.x/Documentation/CEP%209.0%20HTML%20Extension%20Cookbook.md#applications-integrated-with-cep) for 2019 products integration with CEP 9.
 
-* In the Creative Cloud 2015 release extensions and add-ins must be built on the CEP 6 infrastructure.
+* Creative Cloud 2018 products include CEP 8 for developing extensions and add-ons. Refer to the [table](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_8.x/Documentation/CEP%208.0%20HTML%20Extension%20Cookbook.md#applications-integrated-with-cep) for 2018 product integration with CEP 8.
 
-* In the Creative Cloud 2014 release, extensions and add-ins must be built on the CEP 5 infrastructure and loaded with Extension Manager. The current releases either do not now or soon will not support CEP 4 and Flash/ActionScript extensions.
+* In the Creative Cloud 2015.x release in June 2016, Photoshop and Illustrator use CEP 7 while other applications still use CEP 6.1. Extensions and add-ons must be built on at least CEP 6 infrastructure.
+
+* In the Creative Cloud 2015 release, extensions and add-ons must be built on the CEP 6 infrastructure.
+
+* In the Creative Cloud 2014 release, extensions and add-ons must be built on the CEP 5 infrastructure and loaded with Extension Manager. The current releases either do not now or soon will not support CEP 4 and Flash/ActionScript extensions.
 
 * The Creative Suite 6 and the Creative Cloud 2013 releases of Adobe desktop applications support CEP 4, which allows you to build extensions using the older Flash/ActionScript interface model. However, the new HTML5/JavaScript model is preferred. It is recommended that you port existing Flash/ActionScript extensions to the new model.
 
@@ -17,6 +21,43 @@ Resources you will need include:
 * CEP JavaScript libraries for communicating with the operating system and Extension Manager and for communicating with the host application and other extensions.
 * Sample code for how to use these libraries
 * The ZXP packager, a command-line utility
+
+---
+
+For developing CEP 9.0 HTML/JavaScript extensions for CC 2019.x host applications
+
+**Documentation**
+* [CEP 9.0 HTML Extension Cookbook](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_9.x/Documentation/CEP%209.0%20HTML%20Extension%20Cookbook.md)
+* [CEP 9 runtime](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_9.x/Documentation/CEP%209.0%20HTML%20Extension%20Cookbook.md#chromium-embedded-framework-cef) 
+
+For CEP 8,
+* [CEP 8.0 HTML Extension Cookbook](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_8.x/Documentation/CEP%208.0%20HTML%20Extension%20Cookbook.md)
+* [CEP 8 runtime](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_8.x/Documentation/CEP%208.0%20HTML%20Extension%20Cookbook.md#chromium-embedded-framework-cef) 
+
+**APIs** 
+CEP 9 APIs: https://github.com/Adobe-CEP/CEP-Resources/tree/master/CEP_9.x
+* Include these files in your extension project if you need to use the APIs.
+  * CSInterface.js
+  * Vulcan.js
+* Do NOT include this file in your extension project. It is already integrated into CEP.
+  * CEPEngine_extensions.js
+
+**Samples**
+* [Sample extensions](https://github.com/Adobe-CEP/Samples)
+
+**Packaging and Signing Tool (ZXPSignCMD)**
+* Tool: [ZXPSignCMD](https://github.com/Adobe-CEP/CEP-Resources/tree/master/ZXPSignCMD)
+* Document: [Packaging and Signing Adobe Extensions](http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/creativesuite/pdfs/SigningTechNote_CC.pdf) 
+
+**Extension Installation Tools**
+* Extension Manager Command Line Tool
+  * [Announcement: Extension Manager End of Life](https://www.adobeexchange.com/resources/27)
+  * [ExMan Command Line Tool](https://www.adobeexchange.com/resources/28)
+  * [ExMan Command Line Tool's Error Codes](http://www.adobeexchange.com/resources/19#errors)
+* [A Python script to install & manage extensions](https://github.com/adobe-photoshop/generator-panels/blob/master/installPanels.py) (by John Peterson)
+* Other Tools
+  * http://zxpinstaller.com/
+  * http://install.anastasiy.com/
 
 ---
 
@@ -178,6 +219,7 @@ For developing CEP 4.x and extensions for CS6/CC host applications
 ----
 
 Miscellaneous help
+* [Getting Started Guides](https://github.com/Adobe-CEP/Getting-Started-guides)
 * [CS SDK Blog](https://blogs.adobe.com/cssdk/)
 * [Andy Hall's Super Mega Guide (English)] (http://bit.ly/XQn9IV) [ (Japanese)] (http://bit.ly/XQnB9P)
 * [Davide Barranca’s blog](http://www.davidebarranca.com/) and [HTML Panels Development Course](http://htmlpanelsbook.com/)
